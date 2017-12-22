@@ -1,0 +1,50 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <meta charset="UTF-8">
+  <h1>Restaurant Investment Recommendation</h1>
+  <p>
+    <img src="/static/yelplogo.jpg" width="300" height="180" />
+  </p>
+
+
+  <p>Take a look at development of cuisine in US:</p>
+
+  <form method="POST" action="/heatmap">
+  <p><input type="text" name="heatmap_cuisine"> <input type="submit" value="format"></p>
+  </form>
+
+
+  <p>See next most popular restaurant:</p>
+
+  <form method="POST" action="/popular">
+  <p><input type="text" name="popular_zipcode"> <input type="submit" value="search"></p>
+  </form>
+
+  <p>Predict the development of particular restaurant:</p>
+
+  <form method="POST" action="/prediction">
+  <p><input type="text" name="prediction"> <input type="submit" value="predict"></p>
+  </form>
+
+  <p>Evaluate the food! (Upload png file below) </p>
+  <div class="col-md-4">
+  <form method="POST" action="/evaluation" enctype=multipart/form-data>
+        <input type=file name=file><br/>
+        <input type=submit value=Upload>
+    </form>
+  </div>
+
+<p><a href="/">Back to homepage!</a></p>
+    
+</body>
+
+
+</html>
